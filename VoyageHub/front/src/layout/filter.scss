@@ -1,0 +1,58 @@
+#filter{
+    .filter-btn{
+        padding: 10px !important;
+        margin-left: calc(50% - 75px) !important;
+        font-size: 20px !important;
+        width: 150px;
+        height: 60px !important;
+        @media (max-width: 992px){ 
+            margin-left: 10px !important;
+            width: calc(100% - 20px);
+        }
+        svg{
+            height: 40px !important;
+        }
+    }
+}
+.filter-dialog{
+    max-width: 1000px;
+
+    .p-dialog-header{
+        padding: 36px 36px 6px 36px !important;
+    }
+        .filter-cb{
+            margin-bottom: 5px;
+            label{
+                padding-left: 5px;
+                cursor: pointer;
+            }
+        }
+        h4{
+            margin-bottom: 6px;
+            margin-top: 16px;
+        }
+}
+
+#search{
+    .search-container{
+        padding-top: 140px;
+        padding-bottom: 10px;
+        @media (max-width: 992px){ 
+        padding-top: 320px !important;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        }
+    .search-element{
+        background-color: var(--primary-color);
+        margin: 0 10px;
+        padding: 5px 10px;
+        color: #fff;
+        border-radius: 5px;
+        @media (max-width: 992px){ 
+            width: 100%;
+            margin: 2.5px 0px !important;
+            }
+    }
+    }
+}

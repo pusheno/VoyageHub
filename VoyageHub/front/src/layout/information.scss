@@ -1,0 +1,256 @@
+#information {
+    min-height: 700px;
+    width: 100%;
+    @media (max-width: 992px){ 
+        min-height: fit-content;
+    }
+
+    .container-fluid{
+        width: 100%;
+        min-height: 700px;
+        @media (max-width: 992px){ 
+            min-height: fit-content;
+        }
+
+        .information-row{
+            width: 100%;
+            min-height: 700px;
+            @media (max-width: 992px){ 
+                min-height: fit-content;
+            }
+
+            .information-grid{
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 20px repeat(2, 1fr) 50px;
+                grid-template-rows: 50px 3fr 2fr 1fr 20px 2fr 1fr 50px;
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+                @media (max-width: 1400px){ 
+                    grid-template-columns: 1fr 1fr 1fr 20px repeat(2, 1fr) 50px;
+                }
+                @media (max-width: 1200px){ 
+                    grid-template-columns: 50px 1fr 1fr 20px repeat(2, 1fr) 50px;
+                }
+                @media (max-width: 992px){ 
+                    display: none;
+                }
+            }
+
+            .information-steps-container{
+                padding: 50px !important;
+                @media (min-width: 0px) and (max-width: 576px){ 
+                    padding: 30px 20px !important;
+                }
+
+                .information-step:nth-child(1), .information-step:nth-child(2){
+                    margin-bottom: 30px;
+                }
+
+                .information-step{
+                    height: 150px;
+                    min-width: 396px;
+                    width: 75%;
+                    background-color: #fff;
+                    position: relative;
+                    z-index: 20 !important;
+                    border-radius: 0px 35px; // Maska krawędzi
+                    display: flex !important;
+                    @media (min-width: 992px) and (max-width: 1400px){ 
+                        height: 120px;
+                        width: 100%;
+                        min-width: 0px;
+                    }
+                    @media (min-width: 0px) and (max-width: 576px){ 
+                        min-height: 150px;
+                        height: fit-content;
+                        width: 100%;
+                        min-width: 260px;
+                    }
+                    @media (max-width: 992px ){ 
+                        width: 100%;
+                    }
+
+                    .information-step-number{
+                        height: 150px;
+                        width: 150px;
+                        background-color: var(--main-color);
+                        border-bottom-left-radius: 30px;
+                        color: #fff;
+                        font-size: 72px;
+                        @media (min-width: 992px) and (max-width: 1400px){ 
+                            height: 120px;
+                            width: 120px;
+                            font-size: 54px;
+                        }
+                        @media (min-width: 0px) and (max-width: 576px){ 
+                            min-height: 150px;
+                            height: 100% !important;
+                            width: 100px;
+                            font-size: 48px;
+                            //Niech numer wskakuje do gory
+                        }
+                    }
+                    .information-step-info{
+                        background-color: #fff;
+                        width: calc(100% - 150px);
+                        padding: 10px 20px 20px 20px;
+                        border-top-right-radius: 30px;
+                        @media (min-width: 992px) and (max-width: 1400px){ 
+                            width:  calc(100% - 120px);
+                        }
+                        @media (min-width: 0px) and (max-width: 576px){ 
+                            width:  calc(100% - 100px);
+                            padding: 10px;
+                        }
+                        
+                        p, h5{
+                            font-size: 16px;
+                            @media (min-width: 992px) and (max-width: 1400px){ 
+                                font-size: 14px;
+                            }
+                            @media (min-width: 0px) and (max-width: 576px){ 
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .information-image::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.7);
+            }
+            .information-image {
+                position: relative;
+                height: 700px;
+                overflow: hidden;
+                background-image: url("../images/beach1.jpg");
+                background-size: cover;
+                background-position: 100% 100%;
+                @media (max-width: 992px){ 
+                    height: fit-content;
+                }
+
+                .information-img1{ 
+                    grid-area: 6 / 5 / 8 / 7;
+                    background-image: url("../images/beach4.jpg");
+                    background-size: cover;
+                    background-position: 100% 100%;
+                    border-radius: 50px 10px 10px 10px;
+                    z-index: 10;
+                }
+                .information-img2{ 
+                    grid-area: 3 / 5 / 5 / 7;
+                    background-image: url("../images/beach2.jpg");
+                    background-size: cover;
+                    background-position: 100% 100%;
+                    border-radius: 10px 50px 10px 10px;
+                    z-index: 10;
+                }
+                .information-img3{ 
+                    grid-area: 2 / 2 / 7 / 4;
+                    background-image: url("../images/beach3.jpg");
+                    background-size: cover;
+                    background-position: 100% 100%;
+                    border-radius: 10px 50px 10px 10px;
+                    z-index: 10;
+                }
+            }
+
+            .information-otherImage {
+                background-image: url("../images/mountain1.jpg") !important;
+            }
+            .information-image::after {
+                background: rgba(0, 0, 0, 0.6) !important;
+            }
+
+            .information-steps{
+                position: relative;
+                height: 700px;
+                overflow: hidden;
+                background-image: url("../images/main.jpg");
+                background-size: cover;
+                background-position: 100% 100%;
+            }
+
+            .information-info-left{
+                padding-left: 12% !important; // 6fr + 70px
+                @media (max-width: 1400px){ 
+                    padding-left: 8% !important;
+                }
+                @media (max-width: 1200px){ 
+                    padding-left: 4% !important;
+                }
+                @media (max-width: 992px){ 
+                    padding-left: 50px !important;
+                }
+            }
+
+            .information-info-right{
+                padding-right: 12% !important; // 6fr + 70px
+                @media (max-width: 1400px){ 
+                    padding-right: 8% !important;
+                }
+                @media (max-width: 1200px){ 
+                    padding-right: 4% !important;
+                }
+                @media (max-width: 992px){ 
+                    padding-right: 50px !important;
+                }
+            }
+
+            .information-info{
+                background-color: var(--main-color-back-dark);
+                padding: 50px;
+                @media (max-width: 992px){ 
+                    padding: 25px !important;
+                }
+
+                .information-button-container{
+                    button{
+                        border-radius: 0px 15px;
+                    }
+                }
+                .information-check-container{
+                    height: fit-content;
+
+                    .information-info-check-element{
+                        height: 50px;
+                        width: 50%;
+                        display: inline-block !important;
+                        @media (max-width: 576px){ 
+                            width: 100%;
+                        }
+
+                        .information-info-check{
+                            height: 50px;
+                            width: 50px;
+
+                            .information-info-icon{
+                                height: 25px;
+                                width: 25px;
+
+                                svg{
+                                    color: var(--main-color);
+                                    height: 25px;
+                                }
+                            }
+
+                            p{
+                                margin-left: 5px;
+                                font-size: 14px;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
